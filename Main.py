@@ -13,22 +13,28 @@ class Evaluate:
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
       size_of_stack: An integer to set the size of stack.
-     self.top = -1
+    """
+    self.top = -1
     self.size_of_stack = size
     self.stack = []
 
 
 
   def isEmpty(self):
-    
-      # Write your code here
-      return self.top == -1
-
+   """
+    Check whether the stack is empty.
+    Returns:
+      True if it is empty, else returns False.
+    """
+    return self.top == -1
 
 
   def pop(self):
-   
-    # Write your code here
+   """
+    Do pop operation if the stack is not empty.
+    Returns:
+      The data which is popped out if the stack is not empty.
+    """
     if not self.isEmpty():
         x = self.stack.pop()
         self.top = self.top - 1
@@ -36,17 +42,27 @@ class Evaluate:
 
 
   def push(self, operand):
-    
-    # Write your code here
-  
-        self.top += 1
-        self.stack.append(operand)
+    """
+    Push the operand to stack if the stack is not full.
+    Arguments:
+      operand: The operand to be pushed.
+    """
+    self.top += 1
+    self.stack.append(operand)
+
+
 
 
   def validate_postfix_expression(self, expression):
     
-    # Write your code here
-     counter_digit = counter_operand = 0
+   """
+    Check whether the expression is a valid postfix expression.
+    Arguments:
+      expression: A String which represents the expression to be validated.
+    Returns:
+      True if the expression is valid, else returns False.
+    """
+    counter_digit = counter_operand = 0
     for token in expression:
         if token.isdigit():
             counter_digit += 1
@@ -57,10 +73,14 @@ class Evaluate:
 
 
   def evaluate_postfix_expression(self, expression):
-    
-    
-    # Write your code here
-     ops = {
+    """
+    Evaluate the postfix expression
+    Arguments:
+      expression: A String which represents the the expression to be evaluated
+    Returns:
+      The result of evaluated postfix expression.
+    """
+    ops = {
     '+' : operator.add,
     '-' : operator.sub,
     '*' : operator.mul,
