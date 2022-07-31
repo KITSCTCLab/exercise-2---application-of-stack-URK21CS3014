@@ -20,9 +20,7 @@ class Evaluate:
 
 
   def isEmpty(self):
-    """
-    Check whether the stack is empty.
-    """
+    
       # Write your code here
       return self.top == -1
 
