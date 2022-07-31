@@ -44,8 +44,7 @@ def push(self, operand):
 
 
 
-
-  def validate_postfix_expression(self, expression):
+def validate_postfix_expression(self, expression):
     
    """
     Check whether the expression is a valid postfix expression.
@@ -63,8 +62,7 @@ def push(self, operand):
     return counter_digit == counter_operand + 1
 
 
-
-  def evaluate_postfix_expression(self, expression):
+def evaluate_postfix_expression(self, expression):
     """
     Evaluate the postfix expression
     Arguments:
