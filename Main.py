@@ -28,9 +28,8 @@ class Evaluate:
     """
     return self.top == -1
 
-
-  def pop(self):
-   """
+def mypop(self):
+    """
     Do pop operation if the stack is not empty.
     Returns:
       The data which is popped out if the stack is not empty.
