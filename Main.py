@@ -1,6 +1,12 @@
+import operator
 class Evaluate:
-
-    
+  """This class validates and evaluate postfix expression.
+  Attributes:
+      top: An integer which denotes the index of the element at the top of the stack currently.
+      size_of_stack: An integer which represents the size of stack.
+      stack: A List which acts as a Stack.
+  """
+    # Write your code here
 
 
   def __init__(self, size):
@@ -13,7 +19,6 @@ class Evaluate:
     self.stack = []
 
 
-
   def isEmpty(self):
     """
     Check whether the stack is empty.
@@ -22,7 +27,8 @@ class Evaluate:
     """
     return self.top == -1
 
-def mypop(self):
+
+  def mypop(self):
     """
     Do pop operation if the stack is not empty.
     Returns:
@@ -33,7 +39,8 @@ def mypop(self):
         self.top = self.top - 1
         return x
 
-def push(self, operand):
+
+  def push(self, operand):
     """
     Push the operand to stack if the stack is not full.
     Arguments:
@@ -43,8 +50,7 @@ def push(self, operand):
     self.stack.append(operand)
 
 
-
-def validate_postfix_expression(self, expression):
+  def validate_postfix_expression(self, expression):
     """
     Check whether the expression is a valid postfix expression.
     Arguments:
@@ -52,8 +58,7 @@ def validate_postfix_expression(self, expression):
     Returns:
       True if the expression is valid, else returns False.
     """
-    counter_digit = 0
-    counter_operand = 0
+    counter_digit = counter_operand = 0
     for token in expression:
         if token.isdigit():
             counter_digit += 1
@@ -62,8 +67,7 @@ def validate_postfix_expression(self, expression):
     return counter_digit == counter_operand + 1
 
 
-
-def evaluate_postfix_expression(self, expression):
+  def evaluate_postfix_expression(self, expression):
     """
     Evaluate the postfix expression
     Arguments:
@@ -88,6 +92,7 @@ def evaluate_postfix_expression(self, expression):
             result = ops[token](operand1, operand2)
             self.push(int(result))
     return self.stack[0]
+
 
 
 # Do not change the following code
