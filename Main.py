@@ -33,8 +33,7 @@ def mypop(self):
         self.top = self.top - 1
         return x
 
-
-  def push(self, operand):
+def push(self, operand):
     """
     Push the operand to stack if the stack is not full.
     Arguments:
