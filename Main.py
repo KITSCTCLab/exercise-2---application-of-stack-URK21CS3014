@@ -45,22 +45,21 @@ def push(self, operand):
 
 
 def validate_postfix_expression(self, expression):
-    
-   """
+    """
     Check whether the expression is a valid postfix expression.
     Arguments:
       expression: A String which represents the expression to be validated.
     Returns:
       True if the expression is valid, else returns False.
     """
-   counter_digit =0
-   counter_operand = 0
+    counter_digit = counter_operand = 0
     for token in expression:
         if token.isdigit():
             counter_digit += 1
         else:
             counter_operand += 1
     return counter_digit == counter_operand + 1
+
 
 
 def evaluate_postfix_expression(self, expression):
